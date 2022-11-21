@@ -9,7 +9,9 @@ export default function App() {
     <main className="App__container">
       <Title text="ClientBoard" />
       <div className="App__card-grid">
-        <Card user={USERS[0]} />
+        {USERS.map((user) => (
+          <Card key={user.id} user={user} />
+        ))}
       </div>
     </main>
   );
